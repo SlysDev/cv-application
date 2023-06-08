@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Playfair:wght@300;400;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.application-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 10px;
+    margin: 2rem;
+    padding: 1rem;
+    box-shadow: 0px 20px 80px -30px black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.application-form h2 {
+    font-family: "Playfair", sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+    background-color: rgb(70, 70, 70);
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    margin: 0.5rem;
+    border-radius: 40px;
+    box-shadow: 0px 10px 30px -0.25rem black;
+    transition: 0.5s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+    box-shadow: 0px 5px 20px -0.25rem black;
+    /* background-color: lightgray; */
+    /* color: black; */
+    transition: 0.5s ease;
+}
+
+#edit-btn:hover {
+    /* background-color: lightblue; */
+    transition: 0.5s ease;
+}
+
+#submit-btn:hover {
+    /* background-color: lightgreen; */
+    transition: 0.5s ease;
 }
