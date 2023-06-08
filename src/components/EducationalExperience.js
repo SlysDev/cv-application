@@ -19,9 +19,39 @@ export default class EducationalExperience extends Component {
                 <div className="form-section-container">
                     <h2>Educational Experience</h2>
                     <div className="section-information">
-                        <input type="text" name="schoolName" id="" />
-                        <input type="text" name="major" id="" />
-                        <input type="number" name="graduationYear" id="" />
+                        <input
+                            value={this.state.schoolName}
+                            onChange={(e) => {
+                                this.setState({
+                                    schoolName: e.target.value,
+                                });
+                            }}
+                            type="text"
+                            name="schoolName"
+                            id=""
+                        />
+                        <input
+                            value={this.state.major}
+                            onChange={(e) => {
+                                this.setState({
+                                    major: e.target.value,
+                                });
+                            }}
+                            type="text"
+                            name="major"
+                            id=""
+                        />
+                        <input
+                            value={this.state.graduationYear}
+                            onChange={(e) => {
+                                this.setState({
+                                    graduationYear: e.target.value,
+                                });
+                            }}
+                            type="number"
+                            name="graduationYear"
+                            id=""
+                        />
                     </div>
                 </div>
             );

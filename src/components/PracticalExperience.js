@@ -22,24 +22,33 @@ export default class PracticalExperience extends Component {
                     <h2>Practical Experience</h2>
                     <div className="section-information">
                         <input
-                            onChange={(value) => {
-                                this.state.companyName = value;
+                            value={this.state.companyName}
+                            onChange={(e) => {
+                                this.setState({
+                                    companyName: e.target.value,
+                                });
                             }}
                             type="text"
                             name="companyName"
                             id=""
                         />
                         <input
-                            onChange={(value) => {
-                                this.state.positionTitle = value;
+                            value={this.state.positionTitle}
+                            onChange={(e) => {
+                                this.setState({
+                                    positionTitle: e.target.value,
+                                });
                             }}
                             type="text"
                             name="positionTitle"
                             id=""
                         />
                         <input
-                            onChange={(value) => {
-                                this.state.jobDescription = value;
+                            value={this.state.jobDescription}
+                            onChange={(e) => {
+                                this.setState({
+                                    jobDescription: e.target.value,
+                                });
                             }}
                             type="text"
                             name="jobDescription"
@@ -47,7 +56,9 @@ export default class PracticalExperience extends Component {
                         />
                         <input
                             onChange={(value) => {
-                                this.state.dateOfHire = new Date(value);
+                                this.setState({
+                                    dateOfHire: new Date(value),
+                                });
                             }}
                             type="date"
                             name="dateOfHire"
@@ -55,7 +66,9 @@ export default class PracticalExperience extends Component {
                         />
                         <input
                             onChange={(value) => {
-                                this.state.dateOfDeparture = new Date(value);
+                                this.setState({
+                                    dateOfDeparture: new Date(value),
+                                });
                             }}
                             type="date"
                             name="dateOfDeparture"
