@@ -1,11 +1,11 @@
 import { Component } from "react";
+import "../styles/ApplicationSections.css";
 
 export default class EducationalExperience extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            isEditing: false,
             schoolName: "",
             major: "",
             graduationYear: undefined,
@@ -13,22 +13,27 @@ export default class EducationalExperience extends Component {
     }
 
     render() {
-        if (this.state.isEditing) {
+        const { isEditing } = this.props;
+        if (isEditing) {
             return (
-                <div>
-                    <h1>General Information</h1>
-                    <input type="text" name="name" id="" />
-                    <input type="email" name="email" id="" />
-                    <input type="number" name="phone-number" id="" />
+                <div className="form-section-container">
+                    <h2>Educational Experience</h2>
+                    <div className="section-information">
+                        <input type="text" name="schoolName" id="" />
+                        <input type="text" name="major" id="" />
+                        <input type="number" name="graduationYear" id="" />
+                    </div>
                 </div>
             );
         } else {
             return (
-                <div>
-                    <h1>General Information</h1>
-                    <p>{this.state.name}</p>
-                    <p>{this.state.email}</p>
-                    <p>{this.state.phoneNumber.toString()}</p>
+                <div className="form-section-container">
+                    <h2>Educational Experience</h2>
+                    <div className="section-information">
+                        <p>{this.state.schoolName}</p>
+                        <p>{this.state.major}</p>
+                        <p>{this.state.graduationYear}</p>
+                    </div>
                 </div>
             );
         }

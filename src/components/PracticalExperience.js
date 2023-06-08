@@ -1,11 +1,11 @@
 import { Component } from "react";
+import "../styles/ApplicationSections.css";
 
 export default class PracticalExperience extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            isEditing: false,
             companyName: "",
             positionTitle: "",
             jobDescription: "",
@@ -15,22 +15,66 @@ export default class PracticalExperience extends Component {
     }
 
     render() {
-        if (this.state.isEditing) {
+        const { isEditing } = this.props;
+        if (isEditing) {
             return (
-                <div>
-                    <h1>General Information</h1>
-                    <input type="text" name="name" id="" />
-                    <input type="email" name="email" id="" />
-                    <input type="number" name="phone-number" id="" />
+                <div className="form-section-container">
+                    <h2>Practical Experience</h2>
+                    <div className="section-information">
+                        <input
+                            onChange={(value) => {
+                                this.state.companyName = value;
+                            }}
+                            type="text"
+                            name="companyName"
+                            id=""
+                        />
+                        <input
+                            onChange={(value) => {
+                                this.state.positionTitle = value;
+                            }}
+                            type="text"
+                            name="positionTitle"
+                            id=""
+                        />
+                        <input
+                            onChange={(value) => {
+                                this.state.jobDescription = value;
+                            }}
+                            type="text"
+                            name="jobDescription"
+                            id=""
+                        />
+                        <input
+                            onChange={(value) => {
+                                this.state.dateOfHire = new Date(value);
+                            }}
+                            type="date"
+                            name="dateOfHire"
+                            id=""
+                        />
+                        <input
+                            onChange={(value) => {
+                                this.state.dateOfDeparture = new Date(value);
+                            }}
+                            type="date"
+                            name="dateOfDeparture"
+                            id=""
+                        />
+                    </div>
                 </div>
             );
         } else {
             return (
-                <div>
-                    <h1>General Information</h1>
-                    <p>{this.state.name}</p>
-                    <p>{this.state.email}</p>
-                    <p>{this.state.phoneNumber.toString()}</p>
+                <div className="form-section-container">
+                    <h2>Practical Experience</h2>
+                    <div className="section-information">
+                        <p>{this.state.companyName}</p>
+                        <p>{this.state.positionTitle}</p>
+                        <p>{this.state.jobDescription}</p>
+                        <p>{this.state.dateOfHire.toLocaleDateString()}</p>
+                        <p>{this.state.dateOfDeparture.toLocaleDateString()}</p>
+                    </div>
                 </div>
             );
         }
