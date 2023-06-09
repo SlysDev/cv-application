@@ -71,12 +71,15 @@ export default class EducationalExperience extends Component {
                     <h2>Educational Experience</h2>
                     <div className="section-information">
                         <div className="form-item">
+                            <p>Name of School:</p>
                             <p>{this.state.schoolName}</p>
                         </div>
                         <div className="form-item">
+                            <p>Major:</p>
                             <p>{this.state.major}</p>
                         </div>
                         <div className="form-item">
+                            <p>Graduation Year:</p>
                             <p>{this.state.graduationYear}</p>
                         </div>
                     </div>
