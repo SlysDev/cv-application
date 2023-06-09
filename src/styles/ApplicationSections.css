@@ -35,3 +35,10 @@ input:focus {
     justify-content: center;
     flex-wrap: wrap;
 }
+
+.form-item {
+    display: flex;
+    margin: 2rem;
+    gap: 1rem;
+    align-items: center;
+}

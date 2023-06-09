@@ -19,39 +19,49 @@ export default class EducationalExperience extends Component {
                 <div className="form-section-container">
                     <h2>Educational Experience</h2>
                     <div className="section-information">
-                        <input
-                            value={this.state.schoolName}
-                            onChange={(e) => {
-                                this.setState({
-                                    schoolName: e.target.value,
-                                });
-                            }}
-                            type="text"
-                            name="schoolName"
-                            id=""
-                        />
-                        <input
-                            value={this.state.major}
-                            onChange={(e) => {
-                                this.setState({
-                                    major: e.target.value,
-                                });
-                            }}
-                            type="text"
-                            name="major"
-                            id=""
-                        />
-                        <input
-                            value={this.state.graduationYear}
-                            onChange={(e) => {
-                                this.setState({
-                                    graduationYear: e.target.value,
-                                });
-                            }}
-                            type="number"
-                            name="graduationYear"
-                            id=""
-                        />
+                        <div className="form-item">
+                            <p>Name of School:</p>
+                            <input
+                                value={this.state.schoolName}
+                                onChange={(e) => {
+                                    this.setState({
+                                        schoolName: e.target.value,
+                                    });
+                                }}
+                                type="text"
+                                name="schoolName"
+                                id=""
+                            />
+                        </div>
+                        <div className="form-item">
+                            <p>Major:</p>
+                            <input
+                                value={this.state.major}
+                                onChange={(e) => {
+                                    this.setState({
+                                        major: e.target.value,
+                                    });
+                                }}
+                                type="text"
+                                name="major"
+                                id=""
+                            />
+                        </div>
+                        <div className="form-item">
+                            <p>Graduation Year:</p>
+
+                            <input
+                                value={this.state.graduationYear}
+                                onChange={(e) => {
+                                    this.setState({
+                                        graduationYear: e.target.value,
+                                    });
+                                }}
+                                type="number"
+                                name="graduationYear"
+                                id=""
+                            />
+                        </div>
                     </div>
                 </div>
             );
@@ -60,9 +70,15 @@ export default class EducationalExperience extends Component {
                 <div className="form-section-container">
                     <h2>Educational Experience</h2>
                     <div className="section-information">
-                        <p>{this.state.schoolName}</p>
-                        <p>{this.state.major}</p>
-                        <p>{this.state.graduationYear}</p>
+                        <div className="form-item">
+                            <p>{this.state.schoolName}</p>
+                        </div>
+                        <div className="form-item">
+                            <p>{this.state.major}</p>
+                        </div>
+                        <div className="form-item">
+                            <p>{this.state.graduationYear}</p>
+                        </div>
                     </div>
                 </div>
             );
